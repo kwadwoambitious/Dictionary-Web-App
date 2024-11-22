@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dictionary Web App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="navbar">
+        <div class="logo">
+          <img src="./assets/images/logo.svg" alt="logo" />
+        </div>
+        <div class="navbar-items">
+          <div class="font-selector">
+            <button class="font-selector-trigger">
+              <span id="font-name"></span>
+              <span class="arrow-icon"
+                ><img
+                  src="./assets/images/icon-arrow-down.svg"
+                  alt="arrow down"
+              /></span>
+            </button>
+            <div class="font-dropdown">
+              <div class="font-option">Sans Serif</div>
+              <div class="font-option">Serif</div>
+              <div class="font-option">Monospace</div>
+            </div>
+          </div>
+          <span class="divider"></span>
+          <div class="theme-toggle">
+            <input type="checkbox" id="theme-switch" class="toggle-checkbox" />
+            <label for="theme-switch" class="toggle-label"></label>
+            <span class="moon-icon"
+              ><img src="./assets/images/icon-moon.svg" alt="moon" class="moon"
+            /></span>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="search-container">
+          <form id="search-form">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Search for any word..."
+              id="search-input"
+              autocomplete="off"
+            />
+            <button type="submit">
+              <img src="./assets/images/icon-search.svg" alt="search" />
+            </button>
+          </form>
+        </div>
+        <div class="data-container">
+          <div class="not-found-error">
+            <img src="./assets/images/😕.png" alt="Error" />
+            <h3>No Definitions Found</h3>
+            <p>
+              Sorry pal, we couldn't find definitions for the word you were
+              looking for. You can try the search again at later time or head to
+              the web instead.
+            </p>
+          </div>
+          <div class="loading">
+            <span class="loader"></span>
+            <p>Loading word info...</p>
+          </div>
+          <div class="pronunciation">
+            <div>
+              <h1 class="word"></h1>
+              <span class="phonetic"></span>
+            </div>
+            <div class="play-icon"></div>
+          </div>
+          <div id="meanings-container"></div>
+        </div>
+      </main>
+      <footer></footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
